@@ -1,0 +1,13 @@
+NKRO_ENABLE = yes
+UNICODE_ENABLE = yes
+OLED_ENABLE = yes
+OLED_DRIVER = SSD1306
+WPM_ENABLE = yes
+ENCODER_ENABLE = yes
+RGBLIGHT_ENABLE = yes
+CONSOLE_ENABLE = no
+MOUSEKEY_ENABLE = no
+LTO_ENABLE = yes
+ifeq ($(strip $(OLED_ENABLE)), yes)
+	SRC += oled_display.c
+endif
